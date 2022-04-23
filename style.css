@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -12,58 +10,67 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
-.main {
-    background-color: gainsboro;
+.main{
+    background-color: #ffc74c;
     width: 100%;
     height: 100%;
     position: absolute;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    z-index: 1;
-}
-#switch{
-    display: none;
+    justify-content: center;
 }
 
+#switch{
+    display:none;
+}
 .content{
-    width: 90px;
+    width: 100px;
     height: 50px;
-    background-color: blueviolet;
+    background-color: white;
     border-radius: 40px;
+    z-index: 1;
     display: flex;
     align-items: center;
     cursor: pointer;
-    z-index: 2;
 }
 
 .circle{
-    width: 42px;
-    height: 42px;
-    background-color: white;
+    width:44px;
+    height:44px;
+    background-color: #08619c;
     border-radius: 50%;
-    margin-left: 4px;
+    margin-left: 5px;
     transition: 0.3s;
+    z-index: 2;
+}
+.on ,.off{
+    z-index: 1;
+    margin: 7px;
+    font-size: 3vh;
+    font-family: 'Roboto', sans-serif;
 }
 .on{
-    font-size: 7vh;
-    font-family: 'Rubik', sans-serif;
-    transform: translateX(-60px);
+    visibility: hidden;
 }
-.off{
-    font-size: 7vh;
-    font-family: 'Rubik', sans-serif;
-    transform: translateX(70px);
-}
-#switch:checked ~ .main{
-    background-color: darkslategrey;
-}
-#switch:checked ~ .content{
-    background-color: rgb(226, 147, 43);
-}
-#switch:checked ~ label .circle{
-    transform: translateX(40px);
+#switch:checked ~ .content .circle{
+    transform: translateX(46px);
+    background-color: #ffc74c;
 }
 
+#switch:checked ~ .main{
+    background-color: #08619c;
+}
+
+#switch:checked ~ .content{
+    background-color: rgb(240, 236, 243);
+}
+
+#switch:checked ~ .main .off{
+    visibility: hidden;
+}
+#switch:checked ~ .main .on{
+    visibility: visible;
+}
