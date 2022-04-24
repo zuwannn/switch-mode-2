@@ -51,6 +51,7 @@ body{
     margin: 7px;
     font-size: 3vh;
     font-family: 'Roboto', sans-serif;
+    cursor: default;
 }
 .on{
     visibility: hidden;
